@@ -1,0 +1,63 @@
+<head>
+	<title>Kalorien schätzen mit Freunden</title>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div class="row">
+		<div class="small-12 large-12 columns wrapper">
+
+	<div class="row">
+		<div class="small-12 large-12 columns full-width">
+			<nav class="top-bar first">
+				<section class="top-bar-section">
+					<!-- Left Nav Section -->
+					<ul class="left">
+						<li><a href="/players/search"><i class="icon-search"></i> Spieler suchen...</a></li>
+					</ul>
+
+					<ul class="right">
+						{{> mychallenges}}
+						<li><a href="/players">my highscore</a></li>
+					</ul>
+				</section>
+			</nav>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="small-12 large-12 columns full-width">
+			<nav class="top-bar second">
+				<ul class="title-area">
+					<!-- Title Area -->
+					<li class="name">
+						<h1><a href="/">Kalorien schätzen mit Freunden</a></h1>
+					</li>
+					<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+				</ul>
+
+				<section class="top-bar-section">
+					<!-- Left Nav Section -->
+					<ul class="left">
+						<li class="divider"></li>
+						<li><a href="/players">Spieler herausfordern</a></li>
+						<li class="divider"></li>
+						<li><a href="/questions">Frage anlegen</a></li>
+						<li class="divider"></li>
+						<li><a href="/challenges">Challenges</a></li>
+						<li class="divider"></li>
+					</ul>
+
+					<ul class="right">
+						<li class="accounts-ui hide-for-small">{{loginButtons}}</li>
+						<li class="show-for-small">{{loginButtons}}</li>
+					</ul>
+				</section>
+			</nav>
+		</div>
+	</div>
+	{{renderPage}}
+	</div>
+	</div>
+</body>

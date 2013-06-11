@@ -1,0 +1,16 @@
+<template name="players">
+	<div class="row">
+		<div class="small-12 large-12 columns">
+			<h2><i class="icon-group"></i> Spieler</h2>
+			<ul class="side-nav">
+				{{#each players}}
+				{{#if emails.0.address }}
+				<li><a href="/challenge/start/{{_id}}">{{emails.0.address}}</a></li>
+				{{else}}
+				<li><a href="/challenge/start/{{_id}}">{{_id}}</a></li>
+				{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</template>

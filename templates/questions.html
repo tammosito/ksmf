@@ -1,0 +1,42 @@
+<template name="questions">
+	<div class="row">
+		<div class="small-12 large-12 columns">
+			<form>
+				<fieldset>
+					<legend>Frage hinzufügen</legend>
+					<label>Schätzfrage</label>
+					<input type="text" id="question" placeholder="hier deine Schätzfrage">
+					<label>Ergebnis</label>
+					<input type="text" id="result" placeholder="hier dein Ergebnis">
+					<label>Bild</label>
+					<input type="filepicker" id="uploadWidget" data-fp-apikey="ADoKJLa5Qoz6UnmL0IexAz" data-fp-mimetypes="image/*" data-fp-container="modal" data-fp-services="COMPUTER,DROPBOX,FACEBOOK,GMAIL,INSTAGRAM,WEBCAM,PICASA"> 
+					<input type="text" id="image-url" value="null"><br>
+					<input id="js-post-question" class="button" value="Abschicken">
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 large-12 columns">
+			<h2>Schätzfragen</h2>
+			<table>
+				<thead>
+					<tr>
+						<td>Schätzfrage</td>
+						<td>Ergebnis</td>
+						<td>image</td>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each questions}}
+					<tr>
+						<td>{{question}}</td>
+						<td>{{result}}</td>
+						<td><img src="{{image}}" width="200"></td>
+					</tr>	
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</template>

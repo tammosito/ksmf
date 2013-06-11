@@ -1,0 +1,55 @@
+<template name="challenges">
+	<div class="row">
+		<div class="small-12 large-12 columns">
+			<h2><i class="icon-gamepad"></i> Deine Spiele</h2>
+			<ul class="cbp_tmtimeline fade">
+				{{#each challenges}}
+				<li class="fade">
+					<time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>4/10/13</span> <span>18:30</span></time>
+					<div class="cbp_tmicon cbp_tmicon-phone"></div>
+					<div class="cbp_tmlabel">
+						<h4>
+						Gegner: 
+						{{#if $eq player1 me}}
+							{{ player2 }}
+						{{else}}
+							{{ player1 }}
+						{{/if}}
+						</h4>
+
+						{{#if $not winner}}
+							<p>Spiel nicht beendet:</p>
+							{{#if $eq player1 me}}
+								{{#if result1}}
+									Deine Schätzung: {{result1}}
+								{{else}}
+									<a href="/challenge/active/{{ _id }}" class="button">Frage beantworten</a>
+								{{/if}}
+							{{else}}
+								{{#if result2}}
+									Deine Schätzung: {{result2}}
+								{{else}}
+									<a href="/challenge/active/{{ _id }}" class="button">Frage beantworten</a>
+								{{/if}}
+							{{/if}}
+							
+						{{else}}
+							<p>Spiel beendet:</p>
+							{{player1}}: {{result1}} <br>
+							{{player2}}: {{result2}} <br>
+							Gewinner: {{winner}} <br>
+							Frage: {{question.question}} <br>
+							Result: {{question.result}}
+						{{/if}}
+						</p>
+						<p>
+							<a href="/challenge/active/{{ _id }}">{{ _id }}</a>
+							
+						</p>	
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,97 @@
+.accounts-ui {
+  position: absolute;
+  z-index: 10000;
+  width: 550px;
+  right: 0px; }
+  .accounts-ui a {
+    color: #fff;
+    padding-top: 12px !important;
+    padding-bottom: 13px !important; }
+  .accounts-ui .login-form {
+    background: #fff; }
+  .accounts-ui #login-dropdown-list {
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0px 3px 10px rgba(50, 50, 50, 0.75);
+    border-radius: 3px; }
+  .accounts-ui .login-close-text {
+    top: 0px;
+    right: 0;
+    position: absolute;
+    padding: 0 !important;
+    width: 100px;
+    text-align: center;
+    background: #fff !important;
+    color: #333; }
+  .accounts-ui input {
+    top: 0px !important; }
+  .accounts-ui #login-buttons {
+    right: 0;
+    position: absolute; }
+  .accounts-ui .login-button {
+    border: 1px solid #3f8826;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #8ec67b;
+    color: white;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: #5eb540;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5eb540), color-stop(100%, #449429));
+    background-image: -webkit-linear-gradient(#5eb540, #449429);
+    background-image: linear-gradient(#5eb540, #449429);
+    padding: 7px 18px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #357d1d;
+    background-clip: padding-box;
+    margin-top: 10px; }
+    .accounts-ui .login-button:hover:not(:disabled) {
+      box-shadow: inset 0 1px 0 0 #6fb856;
+      cursor: pointer;
+      background-color: #569e3e;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #569e3e), color-stop(100%, #3f8726));
+      background-image: -webkit-linear-gradient(#569e3e, #3f8726);
+      background-image: linear-gradient(#569e3e, #3f8726); }
+    .accounts-ui .login-button:active:not(:disabled) {
+      border: 1px solid #3f8826;
+      box-shadow: inset 0 0 8px 4px #3a7a24, inset 0 0 8px 4px #3a7a24, 0 1px 1px 0 #eeeeee; }
+    .accounts-ui .login-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed; }
+  .accounts-ui .additional-link {
+    display: block;
+    margin: 0;
+    padding: 0.875em 0;
+    list-style-type: none;
+    list-style-position: inside;
+    background: none !important;
+    color: #333;
+    padding: 0 !important; }
+    .accounts-ui .additional-link li {
+      margin: 0 0 0.4375em 0;
+      font-size: 0.875em; }
+      .accounts-ui .additional-link li a {
+        display: block;
+        color: #006e99; }
+      .accounts-ui .additional-link li.active > a:first-child {
+        color: #4d4d4d;
+        font-weight: bold; }
+      .accounts-ui .additional-link li.divider {
+        border-top: 1px solid;
+        height: 0;
+        padding: 0;
+        list-style: none;
+        border-top-color: #e6e6e6; }
+  .accounts-ui .error-message {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1.25em;
+    position: relative;
+    padding: 0.6875em 1.3125em 0.75em 0.6875em;
+    font-size: 0.875em;
+    background-color: #ff6c3c;
+    border-color: #ff4609;
+    color: white;
+    margin: 10px 0 0 0; }

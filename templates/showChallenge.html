@@ -1,0 +1,22 @@
+<template name="showChallenge">
+	<div class="row">
+		<div class="small-12 large-12 columns">
+			<h2>Gegner: {{ opponent.emails.0.address }}</h2>
+			<form>
+				<fieldset>
+					<legend>{{ challenge.question.question }}</legend>
+					<div class="row">
+						<div class="small-6 large-6 columns">
+							
+							<label>Deine Schätzung</label>
+							<input type="number" id="js-result" placeholder="0" value="0">
+							<input id="js-post-result" class="button" value="Abschicken">
+						</div>
+						<div class="small-6 large-6 columns">
+							<img src="{{challenge.question.image}}" width="300">
+						</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</template>
