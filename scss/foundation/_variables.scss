@@ -1178,7 +1178,7 @@ $experimental: true !default;
 // Background color for the top bar
 
 // $topbar-bg:                            #111 !default;
-	$topbar-bg:	#5EB540 !default;
+	$topbar-bg:	lighten($blue,5%) !default;
 
 // Height and margin
 
@@ -1196,7 +1196,7 @@ $experimental: true !default;
 
 // Style the top bar dropdown elements
 
- $topbar-dropdown-bg:                   rgba(73, 111, 127, 0.4); 
+ $topbar-dropdown-bg:                   darken(#dcdbd6, 0.1%); 
 // $topbar-dropdown-link-color:           #fff;
  $topbar-dropdown-link-bg:              #fff;
 // $topbar-dropdown-toggle-size:          5px;
@@ -1234,7 +1234,7 @@ $topbar-link-bg-active:               #fff;
 
 // $topbar-transition-speed:              300ms;
 // $topbar-breakpoint:                    emCalc(940px); // Change to 9999px for always mobile layout
-	$topbar-breakpoint:                    emCalc(940px); // Change to 9999px for always mobile layout
+	$topbar-breakpoint:                    emCalc(1px); // Change to 9999px for always mobile layout
 // $topbar-media-query:                   "only screen and (min-width:"#{$topbar-breakpoint}")";
 
 // Divider Styles

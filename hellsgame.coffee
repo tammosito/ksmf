@@ -20,8 +20,8 @@ if Meteor.isClient
 			$(document).foundation()
 
 
-	Meteor.Router.add "/": "players"
-	#Meteor.Router.add "/": "home"
+	#Meteor.Router.add "/": "players"
+	Meteor.Router.add "/": "home"
 	Meteor.Router.add "/notify": "notify"
 	Meteor.Router.add "/questions": "questions"
 	Meteor.Router.add "/players": "players"
