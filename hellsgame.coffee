@@ -95,6 +95,11 @@ if Meteor.isClient
 
 	Template.questions.rendered = ->  
 		filepicker.constructWidget document.getElementById('uploadWidget')
+	
+	#fix accouts-ui 
+	Template.home.events "click .login-link-text": (evt) ->
+		$(".accounts-dialog").fadeToggle("slow", "linear")
+
 
 	Template.questions.events "change #uploadWidget": (evt) ->
 		$('#image-url').val(evt.fpfile.url);

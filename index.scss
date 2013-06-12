@@ -26,7 +26,7 @@ body {
   border-bottom: 1px solid $inner-radial-color;
 }
 
-h1.title {
+h1.title, h2.title {
   margin-bottom: 60px;
   color: $highlight-font-color;
   text-align: center;
@@ -45,6 +45,10 @@ h2.subheader {
   color: $highlight-font-color;
   font-weight: 600;
   font-size: emCalc(18px);
+}
+
+ .name:hover {
+  background: darken($blue, 5%) !important;
 }
 
 button, .button {
@@ -76,33 +80,37 @@ button, .button {
   margin-bottom: 20px ;
 }
 
-.fade {
-  -webkit-transform: perspective(800px) rotateX(90deg);
-  -webkit-animation-name: fadein;
-  -moz-animation-name: fadein;
-  animation-name: fadein;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in;
-  -moz-animation-timing-function: ease-in;
-  animation-timing-function: ease-in; }
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-    -webkit-transform: perspective(800px) rotateX(90deg);
-    transform: perspective(800px) rotateX(90deg); }
-
-  to {
-    -webkit-transform: perspective(800px) rotateX(0deg);
-    transform: perspective(800px) rotateX(0deg);
-    opacity: 1; } }
 
 
 .pricing-table {
   box-shadow: 0px 5px 50px rgb(247, 247, 247);
   border-radius: 2px;
+}
+
+input {
+  font-family: inherit;
+  color: inherit;
+  @include box-sizing(border-box); 
+  width: 100% !important;
+  height: 50px !important;
+  //margin-bottom: 25px !important;
+  padding: 0 15px 2px !important;
+  font-size: 17px !important;
+  background: white !important;
+  border: 2px solid #ebebeb !important;
+  border-radius: 4px !important;
+  box-shadow: inset 0 -2px #ebebeb !important;
+
+  &:focus {
+    border-color: #62c2e4 !important;
+    outline: none;
+    box-shadow: inset 0 -2px #62c2e4 !important;
+  }
+}
+
+fieldset {
+  background: #fff;
+  padding: 15px 15px 0px 15px;
+  border-radius: 2px;
+  margin-top: 10px;
 }

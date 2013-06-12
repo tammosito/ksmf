@@ -1196,7 +1196,7 @@ $experimental: true !default;
 
 // Style the top bar dropdown elements
 
- $topbar-dropdown-bg:                   darken(#dcdbd6, 0.1%); 
+ $topbar-dropdown-bg:                   lighten($blue, 30%);
 // $topbar-dropdown-link-color:           #fff;
  $topbar-dropdown-link-bg:              #fff;
 // $topbar-dropdown-toggle-size:          5px;

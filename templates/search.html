@@ -1,12 +1,10 @@
 <template name="search">
 	<div class="row">
 		<div class="small-12 large-12 columns">
-			<h1>Spieler suchen</h1>
+			<h2 class="title"><i class="icon-search"></i> Spieler suchen</h2>
 			<form>
 				<fieldset>
-					<legend>Spieler suchen</legend>
-					<label>Name</label>
-					<input type="text" id="js-search-results" placeholder="email?">
+					<input type="text" id="js-search-results" placeholder="Username oder Email-Adresse" autocomplete="off">
 				</fieldset>
 			</form>
 			{{> searchResults}}

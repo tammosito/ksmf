@@ -2708,7 +2708,7 @@ form.custom {
     width: 100%;
     height: auto;
     display: block;
-    background: #dcdbd6;
+    background: #e6eefa;
     font-size: 16px;
     margin: 0; }
   .top-bar-section .divider,
@@ -2726,7 +2726,7 @@ form.custom {
     padding-left: 15px;
     font-size: 0.8125em;
     font-weight: bold;
-    background: #dcdbd6; }
+    background: #e6eefa; }
     .top-bar-section ul li > a:hover {
       background: white;
       color: white; }
@@ -2852,7 +2852,7 @@ form.custom {
       line-height: 45px;
       background: #7ba8e5; }
       .top-bar-section li a:not(.button):hover {
-        background: #959283; }
+        background: #669ae1; }
     .top-bar-section .has-dropdown > a {
       padding-right: 35px !important; }
       .top-bar-section .has-dropdown > a:after {
@@ -4430,37 +4430,30 @@ a.th {
   color: #fff; }
 
 .login-close-text {
-  margin-top: -33px;
+  color: rgba(0, 0, 0, 0);
   position: absolute;
-  border: 1px solid #1f71e1;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #aac5e9;
-  color: white;
-  display: inline-block;
-  font-size: 11px;
-  font-weight: bold;
-  background-color: #669ae1;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #669ae1), color-stop(100%, #2c79e3));
-  background-image: -webkit-linear-gradient(#669ae1, #2c79e3);
-  background-image: linear-gradient(#669ae1, #2c79e3);
-  padding: 7px 18px;
-  text-decoration: none;
-  text-shadow: 0 1px 0 #1567d6;
-  background-clip: padding-box;
-  width: 100px; }
-  .login-close-text:hover:not(:disabled) {
-    box-shadow: inset 0 1px 0 0 #81a9e0;
-    cursor: pointer;
-    background-color: #558dd9;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #558dd9), color-stop(100%, #2071df));
-    background-image: -webkit-linear-gradient(#558dd9, #2071df);
-    background-image: linear-gradient(#558dd9, #2071df); }
-  .login-close-text:active:not(:disabled) {
-    border: 1px solid #1f71e1;
-    box-shadow: inset 0 0 8px 4px #1f6ad1, inset 0 0 8px 4px #1f6ad1, 0 1px 1px 0 #eeeeee; }
-  .login-close-text:disabled {
-    opacity: 0.5;
-    cursor: not-allowed; }
+  right: 0;
+  top: 35px; }
+  .login-close-text:hover {
+    color: rgba(0, 0, 0, 0) !important; }
+  .login-close-text:after {
+    content: 'X';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10px;
+    width: 10px;
+    background: inherit;
+    color: #333;
+    font-size: 1.875em;
+    font-weight: 300; }
+
+.accounts-dialog {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  background: #fff;
+  padding: 15px;
+  border-radius: 2px;
+  margin-top: 10px; }
 
 .login-close-text:hover {
   color: #fff; }
@@ -4590,7 +4583,7 @@ body {
   height: 10px;
   border-bottom: 1px solid #f4f3ee; }
 
-h1.title {
+h1.title, h2.title {
   margin-bottom: 60px;
   color: #de3168;
   text-align: center;
@@ -4607,6 +4600,9 @@ h2.subheader {
   color: #de3168;
   font-weight: 600;
   font-size: 1.125em; }
+
+.name:hover {
+  background: #518cdd !important; }
 
 button, .button {
   border: 1px solid #1f71e1;
@@ -4657,31 +4653,31 @@ button, .button {
 .contain-to-grid.fade {
   margin-bottom: 20px; }
 
-.fade {
-  -webkit-transform: perspective(800px) rotateX(90deg);
-  -webkit-animation-name: fadein;
-  -moz-animation-name: fadein;
-  animation-name: fadein;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in;
-  -moz-animation-timing-function: ease-in;
-  animation-timing-function: ease-in; }
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-    -webkit-transform: perspective(800px) rotateX(90deg);
-    transform: perspective(800px) rotateX(90deg); }
-
-  to {
-    -webkit-transform: perspective(800px) rotateX(0deg);
-    transform: perspective(800px) rotateX(0deg);
-    opacity: 1; } }
-
 .pricing-table {
   box-shadow: 0px 5px 50px #f7f7f7;
   border-radius: 2px; }
+
+input {
+  font-family: inherit;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100% !important;
+  height: 50px !important;
+  padding: 0 15px 2px !important;
+  font-size: 17px !important;
+  background: white !important;
+  border: 2px solid #ebebeb !important;
+  border-radius: 4px !important;
+  box-shadow: inset 0 -2px #ebebeb !important; }
+  input:focus {
+    border-color: #62c2e4 !important;
+    outline: none;
+    box-shadow: inset 0 -2px #62c2e4 !important; }
+
+fieldset {
+  background: #fff;
+  padding: 15px 15px 0px 15px;
+  border-radius: 2px;
+  margin-top: 10px; }
