@@ -1,3 +1,8 @@
+.accounts-ui.logged-in {
+  position: absolute;
+  z-index: 100;
+}
+
 .login-link-text {
   @include button(simple, $blue);
 }
@@ -15,7 +20,7 @@
   &:hover{
     color: rgba(0,0,0,0) !important;
   }
-
+/*
   &:after{
     content: 'X';
     position: absolute;
@@ -28,7 +33,7 @@
     font-size: emCalc(30px);
     font-weight: 300;
   }
-
+*/
 }
 
 .accounts-dialog {

@@ -1,28 +1,42 @@
 <template name="home">
+
 	{{#if currentUser}}
 		<div class="row">
-			<div class="small-12 large-12 columns">
-				<h1 class="title">Kalorien schätzen mit <br> Freunden <i class="icon-smile"></i></h1>
+			<div class="small-4 large-2 large-offset-10 small-offset-8 columns">
+				<p>
+					<a class="accounts-ui logged-in">{{loginButtons}}</a>
+				</p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="small-4 large-4 columns">
-				<h2>Kalogien? Spaß?</h2>
-				<h2 class="subheader">Na' Klar!</h2>
+			<div class="small-12 large-12 columns">
+				<h1 class="title fade">Willkommen in deiner Schaltzentrale <i class="icon-rocket"></i></h1>
 			</div>
-			<div class="small-4 large-4 columns">
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<h2>Dein Account</h2>
+				<h2 class="subheader">Alles was du über Dich wissen musst!</h2>
+			</div>
+			<div class="large-4 columns center">
 				<p>
-					Ja, genau! Blah, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+					<i class="icon-trophy"></i> <br>
+					Du belegst derzeit <span class="my-highscore">Platz 3</span> der Highscoreliste.
 				</p>
-			</div>
-			<div class="small-4 large-4 columns">
 				<p>
-					<a class="accounts-ui">{{loginButtons}}</a>
+					<i class="icon-gamepad"></i> <br>
+					Du hast bisher <span class="my-highscore">1337 Spiele</span> gespielt.
+				</p>
+				<p>
+					<i class="icon-thumbs-up"></i> <br>
+					<span class="my-highscore">13 Spiele gewonnen</span><br>
 				</p>
 			</div>
 			<hr>
 		</div>
+
 	{{else}}
+
 		<div class="row">
 			<div class="small-12 large-12 columns">
 				<h1 class="title">Kalorien schätzen mit <br> Freunden <i class="icon-smile"></i></h1>
@@ -43,7 +57,7 @@
 		<div class="row">
 			<div class="small-4 large-4 columns">
 				<h2>Los geht's</h2>
-				<h2 class="subheader">Jetzt anmelden und der Spaß geht los.</h2>
+				<h2 class="subheader">Jetzt anmelden und der Spaß beginnt.</h2>
 			</div>
 			<div class="small-8 large-8 columns">
 				<p>
@@ -97,6 +111,7 @@
 				</ul>
 			</div>
 		</div>
+
 	{{/if}}
 </template>
 

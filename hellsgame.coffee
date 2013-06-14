@@ -2,9 +2,6 @@ Players = new Meteor.Collection("players")
 Questions = new Meteor.Collection("questions")
 Challenges = new Meteor.Collection("challenges")
 
-
-
-
 if Meteor.isServer
 		Meteor.publish null, ->
 				Meteor.users.find {},
