@@ -5,7 +5,7 @@
 			<ul class="cbp_tmtimeline fade">
 				{{#each challenges}}
 				<li class="fade">
-					<time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>4/10/13</span> <span>18:30</span></time>
+					<!--<time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>4/10/13</span> <span>18:30</span></time>-->
 					<div class="cbp_tmicon cbp_tmicon-phone"></div>
 					<div class="cbp_tmlabel">
 						<h4>
@@ -18,7 +18,7 @@
 						</h4>
 
 						{{#if $not winner}}
-							<p>Spiel nicht beendet:</p>
+							<p><a href="/challenge/active/{{ _id }}">Spiel nicht beendet:</a></p>
 							{{#if $eq player1 me}}
 								{{#if result1}}
 									Deine Schätzung: {{result1}}
@@ -43,7 +43,7 @@
 						{{/if}}
 						</p>
 						<p>
-							<a href="/challenge/active/{{ _id }}">{{ _id }}</a>
+							
 							
 						</p>	
 					</div>

@@ -27,13 +27,36 @@ body {
 }
 
 h1.title, h2.title {
-  margin-bottom: 60px;
-  color: $highlight-font-color;
   text-align: center;
+  color: $highlight-font-color;
   text-shadow: 1px 1px 0px rgb(129, 128, 128);
   font-weight: 800;
-  font-size: emCalc(75px);
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-size: emCalc(35px);
   font-family: 'Lobster', cursive;
+}
+
+@media #{$small} {
+    h1.title, h2.title {
+    margin-bottom: 60px;
+    margin-top: 0px;
+    font-size: emCalc(75px);
+    @include animation-name(fade);
+    @include animation-duration(1.5s);
+    @include animation-timing-function(ease);
+  }
+}
+
+@include keyframes(fade) {
+  from {
+    @include transform(scale(0.3));
+    opacity: 0;
+  }
+  to {
+    @include transform(scale(1));
+    opacity: 1;
+  }
 }
 
 h2 {
