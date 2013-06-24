@@ -4285,14 +4285,14 @@ a.th {
   color: #3594cb; }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
-  color: #dddddd; }
+  color: rgba(255, 255, 255, 0.5); }
 
 /* Right content */
 .cbp_tmtimeline > li .cbp_tmlabel {
   margin: 0 0 15px 25%;
-  background: #cccccc;
+  background: rgba(0, 0, 0, 0.05);
   color: #fff;
-  padding: 1em;
+  padding: 0.5em;
   font-size: 1.2em;
   font-weight: 300;
   line-height: 1.4;
@@ -4300,7 +4300,7 @@ a.th {
   border-radius: 5px; }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
-  background: #dddddd; }
+  background: rgba(255, 255, 255, 0.5); }
 
 .cbp_tmtimeline > li .cbp_tmlabel h2 {
   margin-top: 0px;
@@ -4316,12 +4316,12 @@ a.th {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-right-color: #cccccc;
+  border-right-color: rgba(0, 0, 0, 0.05);
   border-width: 10px;
   top: 10px; }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
-  border-right-color: #dddddd; }
+  border-right-color: rgba(255, 255, 255, 0.5); }
 
 /* The icons */
 .cbp_tmtimeline > li .cbp_tmicon {
@@ -4376,7 +4376,7 @@ a.th {
 
   .cbp_tmtimeline > li .cbp_tmlabel {
     margin: 0 0 30px 0;
-    padding: 1em;
+    padding: 0.5em !important;
     font-weight: 400;
     font-size: 95%; }
 
@@ -4584,6 +4584,9 @@ body {
   background-image: -webkit-radial-gradient( #f4f3ee, #dcdbd6);
   background-image: radial-gradient(   #f4f3ee, #dcdbd6); }
 
+ol li {
+  margin: 20px; }
+
 .colorline {
   background-image: -webkit-linear-gradient(left, #c4e17f 0%, #c4e17f 10%, #f7fdca 10%, #f7fdca 23%, #fecf71 23%, #fecf71 36%, #f0776c 36%, #f0776c 49%, #db9dbe 49%, #db9dbe 62%, #c49cde 62%, #c49cde 75%, #669ae1 75%, #669ae1 88%, #62c2e4 88%, #62c2e4 100%);
   background-image: linear-gradient(to right, #c4e17f 0%, #c4e17f 10%, #f7fdca 10%, #f7fdca 23%, #fecf71 23%, #fecf71 36%, #f0776c 36%, #f0776c 49%, #db9dbe 49%, #db9dbe 62%, #c49cde 62%, #c49cde 75%, #669ae1 75%, #669ae1 88%, #62c2e4 88%, #62c2e4 100%);
@@ -4608,15 +4611,15 @@ h1.title, h2.title {
     -webkit-animation-name: fade;
     -moz-animation-name: fade;
     animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
-    animation-duration: 1.5s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-timing-function: ease;
     -moz-animation-timing-function: ease;
     animation-timing-function: ease; } }
 @-webkit-keyframes fade {
   from {
-    -webkit-transform: scale(0.3);
+    -webkit-transform: scale(0.8);
     opacity: 0; }
 
   to {
@@ -4625,7 +4628,7 @@ h1.title, h2.title {
 
 @-moz-keyframes fade {
   from {
-    -moz-transform: scale(0.3);
+    -moz-transform: scale(0.8);
     opacity: 0; }
 
   to {
@@ -4634,7 +4637,7 @@ h1.title, h2.title {
 
 @-o-keyframes fade {
   from {
-    -o-transform: scale(0.3);
+    -o-transform: scale(0.8);
     opacity: 0; }
 
   to {
@@ -4643,7 +4646,7 @@ h1.title, h2.title {
 
 @keyframes fade {
   from {
-    transform: scale(0.3);
+    transform: scale(0.8);
     opacity: 0; }
 
   to {
@@ -4704,6 +4707,8 @@ button, .button {
   background: #fff;
   margin-bottom: 5px;
   border-radius: 2px; }
+  .search-result-list:hover {
+    background: #bbd2f2; }
   .search-result-list span {
     padding-top: 2px;
     color: #333; }

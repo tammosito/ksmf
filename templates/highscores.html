@@ -1,0 +1,17 @@
+<template name="highscores">
+	<div class="row">
+		<div class="small-12 large-12 columns">
+			<h2 class="title"><i class="icon-star"></i> Highscores</h2>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="small-12 large-12 columns">
+			<ol>
+				{{#each highscores}}
+				<a href="/challenge/start/{{_id}}"><li class="search-result-list">{{player}} (<i class="icon-star"></i> {{highscore}})</li></a>
+				{{/each}}
+			</ol>
+		</div>
+	</div>
+</template>

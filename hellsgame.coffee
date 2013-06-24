@@ -1,6 +1,7 @@
 Players = new Meteor.Collection("players")
 Questions = new Meteor.Collection("questions")
 Challenges = new Meteor.Collection("challenges")
+Highscores = new Meteor.Collection("highscores")
 
 if Meteor.isServer
 		Meteor.publish null, ->
@@ -21,6 +22,7 @@ if Meteor.isClient
 	Meteor.Router.add "/": "home"
 	Meteor.Router.add "/notify": "notify"
 	Meteor.Router.add "/questions": "questions"
+	Meteor.Router.add "/highscores" : "highscores"
 	Meteor.Router.add "/players": "players"
 	Meteor.Router.add "/players/search": "search"
 	Meteor.Router.add "/challenges": "challenges"
@@ -47,9 +49,27 @@ if Meteor.isClient
 		return options.fn(this)  if v1 is v2
 		options.inverse this
 
+	Template.home.helpers
+		
+		ranking: ->
+			highscores = Highscores.find({}, {sort: {"highscore":-1} }).fetch()
+			me = Meteor.user().emails[0].address
+			for k,v of highscores
+				if v.player is me
+					myrank = parseInt(k) + 1
+			myrank
+
+		games: ->
+			me = Meteor.user().emails[0].address
+			Challenges.find({"$or": [{"player1": me}, {"player2": me}]}, {}).count()
+
 	Template.questions.helpers 
 		questions: ->
 			Questions.find()
+
+	Template.highscores.helpers
+		highscores: ->
+			Highscores.find({}, {sort: {"highscore":-1} })
 
 	Template.players.helpers 
 		players: ->
@@ -64,7 +84,7 @@ if Meteor.isClient
 	Template.challenges.helpers 
 		challenges: ->
 			me = Meteor.user().emails[0].address
-			Challenges.find({"$or": [{"player1": me}, {"player2": me}]}, {})
+			Challenges.find({"$or": [{"player1": me}, {"player2": me}]}, {sort: {'_id': 1}})
 		me: ->
 			me = Meteor.user().emails[0].address
 
@@ -73,9 +93,9 @@ if Meteor.isClient
 			if Meteor.user()
 				me = Meteor.user().emails[0].address
 				myChallenges = Challenges.find({"$or": [{"player1": me}, {"player2": me}]}, {}).fetch()
-				console.log myChallenges
+				#console.log myChallenges
 				myChallenges = _.where(myChallenges, {winner:null})
-				console.log myChallenges
+				#console.log myChallenges
 				myChallenges.length
 			else
 				return "bitte einloggen"
@@ -83,6 +103,8 @@ if Meteor.isClient
 	Template.startChallenge.helpers 
 		opponent: ->
 			Meteor.users.findOne({_id : Session.get("opponent_id")},{})
+		me: ->
+			me = Meteor.user().emails[0].address
 
 	Template.showChallenge.helpers 
 		opponent: ->
@@ -141,6 +163,7 @@ if Meteor.isClient
 			image: template.find("#image-url").value
 
 	Template.showChallenge.events "click #js-post-result": (event, template) ->
+		event.preventDefault()
 		result = template.find("#js-result").value
 		challenge = Challenges.findOne(_id : Session.get("challenge_id"),{})
 
@@ -169,10 +192,34 @@ if Meteor.isClient
 
 			if delta2 > delta1
 				Challenges.update({_id : Session.get("challenge_id")}, $set:{"winner" : challenge.player1})
-				console.log 'winner: ' + challenge.player1
+				#console.log 'winner: ' + challenge.player1
+
+				player = Highscores.findOne({player : challenge.player1})
+				#console.log player
+				if not player?
+					Highscores.insert
+						player : challenge.player1
+						highscore : 10
+				else
+					Highscores.update({_id : player._id}, $set: {"highscore" : player.highscore + 10})
+
+				console.log Highscores.find().fetch()
+
 			else if delta1 > delta2
 				Challenges.update({_id : Session.get("challenge_id")}, $set:{"winner" : challenge.player2})
-				console.log 'winner: ' + challenge.player2
+				#console.log 'winner: ' + challenge.player2
+
+				player = Highscores.findOne({player : challenge.player2})
+				#console.log player
+				if not player?
+					Highscores.insert
+						player : challenge.player2
+						highscore : 10
+				else
+					Highscores.update({_id : player._id}, $set: {"highscore" : player.highscore + 10})
+
+				console.log Highscores.find().fetch()
+
 			else
 				Challenges.update({_id : Session.get("challenge_id")}, $set:{"winner" : "draw"})
 				console.log 'winner: draw' 

@@ -1,3 +1,7 @@
+$even: rgba(0,0,0,0.05);
+$odd: rgba(255,255,255,0.5);
+$line: #ccc;
+
 
 .cbp_tmtimeline {
   margin: 30px 0 0 0;
@@ -12,7 +16,7 @@
   top: 0;
   bottom: 0;
   width: 5px;
-  background: #cccccc;
+  background: $line;
   left: 20%;
   margin-left: -8px; }
 
@@ -39,14 +43,14 @@
   color: #3594cb; }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
-  color: #dddddd; }
+  color: $odd; }
 
 /* Right content */
 .cbp_tmtimeline > li .cbp_tmlabel {
   margin: 0 0 15px 25%;
-  background: #cccccc;
+  background: $even;
   color: #fff;
-  padding: 1em;
+  padding: 0.5em;
   font-size: 1.2em;
   font-weight: 300;
   line-height: 1.4;
@@ -54,7 +58,7 @@
   border-radius: 5px; }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
-  background: #dddddd; }
+  background: $odd; }
 
 .cbp_tmtimeline > li .cbp_tmlabel h2 {
   margin-top: 0px;
@@ -70,12 +74,12 @@
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-right-color: #cccccc;
+  border-right-color: $even;
   border-width: 10px;
   top: 10px; }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
-  border-right-color: #dddddd; }
+  border-right-color: $odd; }
 
 /* The icons */
 .cbp_tmtimeline > li .cbp_tmicon {
@@ -130,7 +134,7 @@
 
   .cbp_tmtimeline > li .cbp_tmlabel {
     margin: 0 0 30px 0;
-    padding: 1em;
+    padding: 0.5em !important;
     font-weight: 400;
     font-size: 95%; }
 

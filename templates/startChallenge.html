@@ -1,10 +1,15 @@
 <template name="startChallenge">
 	<div class="row">
 		<div class="small-12 large-12 columns">
-			<h2 class="title">Du willst {{ opponent.emails.0.address }} herausfordern?</h2>
-			<button id="js-start-challenge" class="button" value="Ja!">Ja!</button>
-			<br>
-			<a href="/players" class="button">Nein!</a>
+			{{#if $eq opponent.emails.0.address me}}
+				<p>Du kannst nicht gegen dich selber Spielen!</p>
+			{{else}}
+				<h2 class="title">Du willst {{ opponent.emails.0.address }} herausfordern?</h2>
+				<ul class="button-group round even-2">
+				  <li><button id="js-start-challenge" class="button large" value="Ja!">Ja!</button></li>
+				  <li><a href="/players" class="button large">Nein!</a></li>
+				</ul>
+			{{/if}}
 		</div>
 	</div>
 </template>
