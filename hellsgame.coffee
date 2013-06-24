@@ -35,7 +35,7 @@ if Meteor.isClient
 
 	Meteor.Router.filter "requireLogin",
 	#only: "home"
-	except: "home"
+	except: ["home", "questions"]
 
 	Meteor.Router.filters requireLogin: (page) ->
 		if Meteor.loggingIn()
