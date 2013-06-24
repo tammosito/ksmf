@@ -4596,6 +4596,11 @@ ol li {
 .side-nav span {
   font-weight: bold; }
 
+.challenges {
+  color: #333; }
+  .challenges span {
+    font-weight: bold; }
+
 .colorline {
   background-image: -webkit-linear-gradient(left, #c4e17f 0%, #c4e17f 10%, #f7fdca 10%, #f7fdca 23%, #fecf71 23%, #fecf71 36%, #f0776c 36%, #f0776c 49%, #db9dbe 49%, #db9dbe 62%, #c49cde 62%, #c49cde 75%, #669ae1 75%, #669ae1 88%, #62c2e4 88%, #62c2e4 100%);
   background-image: linear-gradient(to right, #c4e17f 0%, #c4e17f 10%, #f7fdca 10%, #f7fdca 23%, #fecf71 23%, #fecf71 36%, #f0776c 36%, #f0776c 49%, #db9dbe 49%, #db9dbe 62%, #c49cde 62%, #c49cde 75%, #669ae1 75%, #669ae1 88%, #62c2e4 88%, #62c2e4 100%);

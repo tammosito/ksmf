@@ -9,12 +9,12 @@
 					<div class="cbp_tmicon cbp_tmicon-phone hide-for-small"></div>
 					<div class="cbp_tmlabel">
 						<div class="row">
-						<div class="small-12 large-6 columns">
+						<div class="small-12 large-6 columns challenges">
 							{{#if $not winner}}
 							<!--<a href="/challenge/active/{{ _id }}">Spiel nicht beendet:</a>-->
 							{{#if $eq player1 me}}
 								{{#if result1}}
-									Deine Schätzung: {{result1}}
+									<span>Deine Schätzung: </span>{{result1}}
 								{{else}}
 									<a href="/challenge/active/{{ _id }}" class="button medium">Frage beantworten</a>
 								{{/if}}
